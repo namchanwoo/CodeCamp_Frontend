@@ -1,3 +1,4 @@
+import Head from "next/head";
 export default function Home() {
     return (
         <>
@@ -14,7 +15,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div>안녕하세요.</div>
+            <div>마이</div>
         </>
     );
 }

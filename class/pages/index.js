@@ -21,7 +21,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div>안녕하세요.</div>
+            <div>안녕하세요. 클래스 퀴즈01입니다.</div>
         </>
     );
 }
