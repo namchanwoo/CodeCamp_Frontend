@@ -1,15 +1,9 @@
-// import '@/styles/globals.css'
+import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import type { AppProps } from "next/app";
 
-// export default function App({ Component, pageProps }) {
-//     return <Component {...pageProps} />;
-// }
-
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import { AppProps } from 'next/app';
-
-export default function MyApp({ Component }: AppProps) {
+export default function MyApp({ Component }: AppProps): JSX.Element {
   const client = new ApolloClient({
-    uri: 'http://practice.codebootcamp.co.kr/graphql',
+    uri: "http://practice.codebootcamp.co.kr/graphql",
     cache: new InMemoryCache(),
   });
 

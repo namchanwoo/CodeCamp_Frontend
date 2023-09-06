@@ -1,5 +1,4 @@
-import { gql, useMutation, useQuery } from '@apollo/client';
-import { Fragment } from 'react';
+import { gql, useMutation, useQuery } from "@apollo/client";
 
 const FETCH_BOARDS = gql`
   query {
@@ -26,7 +25,7 @@ export default function StaticRoutingMovedPage() {
 
   console.log(data?.fetchBoards);
 
-  const onClickDelete = async event => {
+  const onClickDelete = async (event) => {
     try {
       const result = await deleteBoard({
         variables: { number: Number(event.target.id) },
@@ -46,9 +45,9 @@ export default function StaticRoutingMovedPage() {
           <span>
             <input type="checkbox" />
           </span>
-          <span style={{ margin: '10px' }}>{el.number}</span>
-          <span style={{ margin: '10px' }}>{el.writer}</span>
-          <span style={{ margin: '10px' }}>{el.title}</span>
+          <span style={{ margin: "10px" }}>{el.number}</span>
+          <span style={{ margin: "10px" }}>{el.writer}</span>
+          <span style={{ margin: "10px" }}>{el.title}</span>
           <span>
             <button id={el.number} onClick={onClickDelete}>
               삭제

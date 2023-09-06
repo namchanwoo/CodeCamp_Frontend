@@ -1,10 +1,10 @@
-import * as S from './BoardWrite.styles';
-import { IBoardWriteUIProps } from './BoardWrite.types';
+import * as S from "./BoardWrite.styles";
+import type { IBoardWriteUIProps } from "./BoardWrite.types";
 
-export default function BoardWriteUI(props: IBoardWriteUIProps) {
+export default function BoardWriteUI(props: IBoardWriteUIProps): JSX.Element {
   return (
     <S.Wrapper>
-      <S.Title>{props.isEdit ? '게시글 수정' : '게시글 등록'}</S.Title>
+      <S.Title>{props.isEdit ? "게시글 수정" : "게시글 등록"}</S.Title>
       <S.WriterWrapper>
         <S.InputWrapper>
           <S.Label>작성자</S.Label>
@@ -12,8 +12,8 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
             type="text"
             placeholder="이름을 적어주세요."
             onChange={props.onChangeWriter}
-            defaultValue={props.data?.fetchBoard.writer ?? ''}
-            readOnly={!!props.data?.fetchBoard.writer}
+            defaultValue={props.data?.fetchBoard.writer ?? ""}
+            readOnly={Boolean(props.data?.fetchBoard.writer)}
           />
           <S.Error>{props.writerError}</S.Error>
         </S.InputWrapper>
@@ -77,7 +77,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
           isActive={props.isEdit ? true : props.isActive}
         >
-          {props.isEdit ? '수정하기' : '등록하기'}
+          {props.isEdit ? "수정하기" : "등록하기"}
         </S.SubmitButton>
       </S.ButtonWrapper>
     </S.Wrapper>

@@ -1,7 +1,7 @@
-import { Redinput, Blueinput } from './BoardWrite.style';
-import { IBoardWriteUIProps } from './BoardWrite.types';
+import { Blueinput } from "./BoardWrite.style";
+import type { IBoardWriteUIProps } from "./BoardWrite.types";
 
-export default function BoardWriteUI(props: IBoardWriteUIProps) {
+export default function BoardWriteUI(props: IBoardWriteUIProps): JSX.Element {
   return (
     <div>
       작성자:
@@ -26,7 +26,7 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
       <button
         onClick={props.isEdit ? props.onClickUpdate : props.onClickSubmit}
       >
-        {props.isEdit ? '수정' : '등록'}
+        {props.isEdit ? "수정" : "등록"}
       </button>
     </div>
   );

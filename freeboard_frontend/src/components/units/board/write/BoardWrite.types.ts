@@ -1,9 +1,9 @@
-import { ChangeEvent } from 'react';
-import { IQuery } from '../../../../commons/types/generated/types';
+import type { ChangeEvent } from "react";
+import type { IQuery } from "../../../../commons/types/generated/types";
 
 export interface IBoardWriteProps {
   isEdit: boolean;
-  data?: Pick<IQuery, 'fetchBoard'>;
+  data?: Pick<IQuery, "fetchBoard">;
 }
 
 export interface IBoardWriteUIProps {
@@ -19,7 +19,7 @@ export interface IBoardWriteUIProps {
   onClickUpdate: () => void;
   isActive: boolean;
   isEdit: boolean;
-  data?: Pick<IQuery, 'fetchBoard'>;
+  data?: Pick<IQuery, "fetchBoard">;
 }
 
 export interface ISubmitButtonProps {
